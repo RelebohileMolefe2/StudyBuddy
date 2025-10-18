@@ -1,0 +1,75 @@
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  --sidebar-width: 220px;
+}
+
+.layout-root {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header stays at the top */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: #5622e3ea;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Footer stays at the bottom */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  background-color: #004080;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+/* Sidebar is now fixed */
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  bottom: var(--footer-height);
+  left: 0;
+  width: var(--sidebar-width);
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 20px 0;
+  z-index: 999;
+}
+
+/* Main layout area — shifts to the right of the fixed sidebar */
+.layout-container {
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
+  margin-left: var(--sidebar-width);
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  overflow: hidden;
+  display: flex;
+}
+
+/* Only this area scrolls */
+.layout-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  background-color: #ffffff;
+}

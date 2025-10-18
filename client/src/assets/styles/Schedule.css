@@ -1,0 +1,120 @@
+/* Schedule Container */
+.schedule-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.6s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading Styles */
+.schedule-container h2,
+.schedule-container h3 {
+  color: #4a00e0;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+/* Session List */
+.schedule-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.schedule-container li {
+  background: #f8f9ff;
+  border-left: 5px solid #6c63ff;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.schedule-container li:hover {
+  transform: translateY(-2px);
+}
+
+/* Form */
+.schedule-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.schedule-container input,
+.schedule-container select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.schedule-container input:focus,
+.schedule-container select:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Error message */
+.schedule-container p[style*="red"] {
+  margin: 0;
+  font-weight: 500;
+  color: #d9534f;
+}
+
+/* Button */
+.schedule-container button {
+  background: linear-gradient(135deg, #6c63ff, #8e2de2);
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.schedule-container button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #594eea, #7c1fd3);
+  transform: scale(1.02);
+}
+
+.schedule-container button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .schedule-container {
+    padding: 16px;
+  }
+
+  .schedule-container input,
+  .schedule-container select {
+    font-size: 15px;
+  }
+
+  .schedule-container button {
+    font-size: 15px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

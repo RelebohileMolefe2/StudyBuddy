@@ -1,0 +1,81 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  animation: fadeSlideDown 0.5s ease-in-out;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon:hover {
+  color: #ffd1f5;
+  transform: scale(1.1);
+}
+
+.profile-menu {
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Responsive: Stack layout on small screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,178 @@
+.study-groups-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9ff;
+  animation: fadeIn 0.5s ease;
+}
+
+.study-groups-container h1,
+.study-groups-container h2 {
+  color: #4a00e0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Section Styling */
+.user-groups,
+.other-groups,
+.create-group {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background: #f0f0ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+ul li h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+ul li p {
+  margin: 0 0 12px 0;
+  color: #555;
+}
+
+ul li:hover {
+  background-color: #eae8ff;
+}
+
+/* Group Details Toggle */
+.group-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 2px solid #e0dff0;
+  margin-top: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #8e2de2;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #8e2de2, #ff84d8);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #6a11cb, #ff5fc1);
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Success & Error Messages */
+.message-success {
+  color: #1d9237;
+  background-color: #e5ffe9;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 500;
+  border: 1px solid #a4f5bb;
+  text-align: center;
+}
+
+.message-error {
+  color: #d1005f;
+  background-color: #ffe5f7;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 500;
+  border: 1px solid #ffb3d1;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .study-groups-container {
+    padding: 20px;
+  }
+
+  ul li {
+    padding: 15px;
+  }
+
+  form label {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px 18px;
+  }
+}
